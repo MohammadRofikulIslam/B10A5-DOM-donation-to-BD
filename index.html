@@ -43,10 +43,10 @@
       </nav>
       <!--Header Page Buttons  -->
       <div class="text-center bg-white py-5 space-x-4">
-        <button class="btn px-5 font-bold bg-lime-400 hover:bg-lime-400">
+        <button id="btn-donation" class="btn px-5 font-bold bg-lime-400 hover:bg-lime-400">
           Donation
         </button>
-        <button class="btn border border-gray-300 bg-white px-5">
+        <button id="btn-history" class="btn border border-gray-300 bg-white px-5">
           History
         </button>
       </div>
@@ -54,7 +54,7 @@
 
     <main>
       <!-- Donation Card Section  -->
-      <section class="px-2 max-w-5xl mx-auto my-10 space-y-10">
+      <section id="donation-section" class="px-2 max-w-5xl mx-auto my-10 space-y-10">
         <!-- Card 1  -->
         <div class="card lg:card-side bg-base-100 border border-gray-300 p-5">
           <div class="rounded-xl">
@@ -64,7 +64,7 @@
             <button class="btn w-fit mt-4 lg:mt-0">
               💰 <span id="noakhali-donation-total">1000</span> BDT
             </button>
-            <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+            <h2 id="card-title-1" class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
             <p class="text-gray-500">
               The recent floods in Noakhali have caused significant damage to
               homes infrastructure. Your donation will help provide essential
@@ -84,7 +84,7 @@
                 id="noakhali-donation-btn"
                 class="btn card-btn w-full px-5 font-bold bg-lime-400 hover:bg-lime-400"
               >
-                Donation
+                Donate Now
               </button>
               <!-- Modal  -->
               <dialog id="my_modal_5" class="modal w-2/5 mx-auto">
@@ -113,7 +113,7 @@
             <button class="btn w-fit mt-4 lg:mt-0">
               💰 <span id="feni-donation-total">1000</span> BDT
             </button>
-            <h2 class="card-title">
+            <h2 id="card-title-2" class="card-title">
               Donate for Flood Relief in Feni,Bangladesh
             </h2>
             <p class="text-gray-500">
@@ -136,7 +136,7 @@
                 id="feni-donation-btn"
                 class="btn card-btn w-full px-5 font-bold bg-lime-400 hover:bg-lime-400"
               >
-                Donation
+                Donate Now
               </button>
               <!-- Modal  -->
               <dialog id="my_modal_5" class="modal w-2/5 mx-auto">
@@ -169,7 +169,7 @@
             <button class="btn w-fit mt-4 lg:mt-0">
               💰 <span id="quota-donation-total">1000</span> BDT
             </button>
-            <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+            <h2 id="card-title-3" class="card-title">Aid for Injured in the Quota Movement</h2>
             <p class="text-gray-500">
               The recent Quota movement has resulted in numerous injuries and
               significant hardship for many individuals. Your support is crucial
@@ -192,7 +192,7 @@
                 id="quota-donation-btn"
                 class="btn card-btn w-full px-5 font-bold bg-lime-400 hover:bg-lime-400"
               >
-                Donation
+                Donate Now
               </button>
               <!-- Modal  -->
               <dialog id="my_modal_5" class="modal w-2/5 mx-auto">
@@ -213,9 +213,16 @@
           </div>
         </div>
       </section>
+      <!-- History Section  -->
+      <section id="history-container" class=" hidden max-w-5xl mx-auto my-10 space-y-10 px-2">
+       
+      </section>
     </main>
     <footer></footer>
     <script src="js/common-function.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/donation.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/blog.js"></script>
+
   </body>
 </html>

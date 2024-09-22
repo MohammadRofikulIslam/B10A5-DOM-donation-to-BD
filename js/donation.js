@@ -19,6 +19,18 @@ document
     const balanceUpdated = balance - donationAmount;
     document.getElementById("balance").innerText = balanceUpdated;
     document.getElementById("noakhali-donation").value = "";
+
+    const now = new Date();
+    const cardTitle = document.getElementById("card-title-1").innerText;
+    const historyContainer = document.getElementById("history-container");
+    const div = document.createElement("div");
+    div.innerHTML = `
+<div class="border border-gray-300 bg-white p-5 rounded-xl">
+          <h4 class="font-bold">${inputValue} Taka is ${cardTitle}</h4>
+          <p class="text-gray-500">Date : ${now} </p>
+        </div>
+`;
+    historyContainer.appendChild(div);
   });
 
 // Feni donation functionality
@@ -42,6 +54,18 @@ document
     const balanceUpdated = balance - donationAmount;
     document.getElementById("balance").innerText = balanceUpdated;
     document.getElementById("feni-donation").value = "";
+
+    const now = new Date();
+    const cardTitle = document.getElementById("card-title-2").innerText;
+    const historyContainer = document.getElementById("history-container");
+    const div = document.createElement("div");
+    div.innerHTML = `
+<div class="border border-gray-300 bg-white p-5 rounded-xl">
+          <h4 class="font-bold">${inputValue} Taka is ${cardTitle}</h4>
+          <p class="text-gray-500">Date : ${now} </p>
+        </div>
+`;
+    historyContainer.appendChild(div);
   });
 
 // Quota donation functionality
@@ -65,4 +89,36 @@ document
     const balanceUpdated = balance - donationAmount;
     document.getElementById("balance").innerText = balanceUpdated;
     document.getElementById("quota-donation").value = "";
+
+    const now = new Date();
+    const cardTitle = document.getElementById("card-title-3").innerText;
+    const historyContainer = document.getElementById("history-container");
+    const div = document.createElement("div");
+    div.innerHTML = `
+<div class="border border-gray-300 bg-white p-5 rounded-xl">
+          <h4 class="font-bold">${inputValue} Taka is donated for ${cardTitle}</h4>
+          <p class="text-gray-500">Date : ${now} </p>
+        </div>
+`;
+    historyContainer.appendChild(div);
   });
+
+// Donation Button Functionality
+document.getElementById("btn-donation").addEventListener("click", function () {
+  document
+    .getElementById("btn-donation")
+    .classList.add("font-bold", "bg-lime-400", "hover:bg-lime-400");
+  document
+    .getElementById("btn-donation")
+    .classList.remove("border", "border-gray-300", "bg-white");
+
+  document
+    .getElementById("btn-history")
+    .classList.remove("font-bold", "bg-lime-400", "hover:bg-lime-400");
+  document
+    .getElementById("btn-history")
+    .classList.add("border", "border-gray-300", "bg-white");
+
+  document.getElementById("donation-section").classList.remove("hidden");
+  document.getElementById("history-container").classList.add("hidden");
+});
