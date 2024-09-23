@@ -5,8 +5,12 @@ document
     event.preventDefault();
     const inputValue = document.getElementById("noakhali-donation").value;
     const balance = getTextValueById("balance");
-    if (inputValue <= 0 || isNaN(inputValue) || inputValue > balance) {
+    if (inputValue <= 0 || isNaN(inputValue)) {
       alert("Please Enter Valid Amount");
+      return;
+    }
+    else if(inputValue > balance){
+      alert("You Don't Have Enough Balance")
       return;
     }
     document.getElementById("my_modal_5").showModal();
@@ -40,8 +44,12 @@ document
     event.preventDefault();
     const inputValue = document.getElementById("feni-donation").value;
     const balance = getTextValueById("balance");
-    if (inputValue <= 0 || isNaN(inputValue) || inputValue > balance) {
+    if (inputValue <= 0 || isNaN(inputValue)) {
       alert("Please Enter Valid Amount");
+      return;
+    }
+    else if(inputValue > balance){
+      alert("You Don't Have Enough Balance")
       return;
     }
     document.getElementById("my_modal_5").showModal();
@@ -75,8 +83,12 @@ document
     event.preventDefault();
     const inputValue = document.getElementById("quota-donation").value;
     const balance = getTextValueById("balance");
-    if (inputValue <= 0 || isNaN(inputValue) || inputValue > balance) {
+    if (inputValue <= 0 || isNaN(inputValue)) {
       alert("Please Enter Valid Amount");
+      return;
+    }
+    else if(inputValue > balance){
+      alert("You Don't Have Enough Balance")
       return;
     }
     document.getElementById("my_modal_5").showModal();
